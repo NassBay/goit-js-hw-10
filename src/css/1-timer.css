@@ -43,19 +43,22 @@ body {
 }
 
 .start-button {
-  height: 40px;
   padding: 8px 16px;
+  height: 40px;
   width: 75px;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.64px;
-  border-radius: 4px;
   border: none;
-  background: #4E75FF;
+  border-radius: 4px;
   color: white;
-  transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #4e75ff;
 }
 
 .start-button:hover {
   background-color: #4669e9;
+}
+
+.start-button[disabled] {
+  background-color: #959595;
 }

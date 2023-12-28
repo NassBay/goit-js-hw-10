@@ -10,10 +10,10 @@ flatpickr('#datetime-picker', {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] < new Date()) {
-        iziToast.error({
-            title: 'Error',
-            message: 'Plese choose date in future.'
-      })
+      iziToast.error({
+        title: 'Error',
+        message: 'Choose a date in the future.',
+      });
       btnStart.classList.add('disabled');
     } else {
       btnStart.classList.remove('disabled');
@@ -29,7 +29,7 @@ let seconds = document.querySelector('[data-seconds]');
 let dateInput = document.querySelector('#datetime-picker');
 let selectedDate;
 
-const btnStart = document.querySelector('button');
+const btnStart = document.querySelector('.start-button');
 btnStart.setAttribute('disabled', true);
 
 function addLeadingZero(value) {
@@ -91,10 +91,10 @@ function dateReverseCounter() {
           hours.textContent = '00';
           minutes.textContent = '00';
           seconds.textContent = '00';
-            iziToast.success({
-                title: 'Success',
-                message: 'Timer finished)'
-          })
+          iziToast.success({
+            title: 'Success',
+            message: 'Timer is finished.',
+          });
           clearInterval(timer);
           timerStarted = false;
           dateInput.removeAttribute('disabled', true);

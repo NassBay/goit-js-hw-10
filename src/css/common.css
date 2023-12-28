@@ -8,7 +8,7 @@ a {
   color: white;
 }
 
-button {
+.menu-button {
   cursor: pointer;
   font-size: 24px;
   padding: 20px;
@@ -19,7 +19,7 @@ button {
   transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-button:hover {
+.menu-button:hover {
   background-color: #4669e9;
 }
 
